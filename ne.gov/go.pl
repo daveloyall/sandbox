@@ -4,6 +4,7 @@
 #    Repo: https://github.com/jhannah/sandbox/tree/master/ne.gov
 
 use 5.12.1;
+use warnings;   # since there's no    use Moose;   in here (weird, right? ;) 
 use XML::Twig;
 use GraphViz2;
 
@@ -24,15 +25,15 @@ my $twig = XML::Twig->new(
 $twig->parsefile($file);
 my $root = $twig->root;
 # ------------------------------------------
-my $file = "$dir/serverQueuemap.xml";
+$file = "$dir/serverQueuemap.xml";
 say "Parsing $file...";
-my $twig = XML::Twig->new(
+$twig = XML::Twig->new(
    twig_handlers => {
       workerQueue => \&process_worker_queue,
    },
 );
 $twig->parsefile($file);
-my $root = $twig->root;
+$root = $twig->root;
 # ------------------------------------------
 $file = "map.png";
 say "Writing $file...";
@@ -87,6 +88,5 @@ sub add_edge {
    # Sometimes we want to de-dupe known edges. If so, we'd use this:
    $known_edges->{$x}->{$y} = 1;
 }
-
 
 
