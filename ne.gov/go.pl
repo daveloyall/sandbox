@@ -1,3 +1,4 @@
+#!/usr/bin/perl
 # Quick draft of using XML::Twig + Graphviz to visualize some ne.gov data
 #    by jay.hannah@iinteractive.com 
 #    Repo: https://github.com/jhannah/sandbox/tree/master/ne.gov
@@ -51,7 +52,7 @@ sub process_service {
    my $name =            $s->first_child('Name')->text;
    my $action_name =     $s->first_child('Action')->first_child('Name')->text;
    my $action_queue_id = $s->first_child('Action')->first_child('QueueId')->text;
-   add_edge($name, $action_queue_id);
+   add_edge($name . " / " . $action_name, $action_queue_id);
 }
 
 
@@ -60,8 +61,8 @@ sub process_worker_queue {
    my $q =     $wq->first_child('queueId')->text;
    my $db =    $wq->first_child('databaseId')->text;
    my $table = $wq->first_child('tableName')->text;
-   add_edge($q, $db);
-   add_edge($db, $table);
+   add_edge($q, $db . "." . $table);
+#   add_edge($db, $table);
 }
 
 
