@@ -48,11 +48,15 @@ exit;
 
 sub process_service {
    my ($twig, $s) = @_;
-   return unless ($s->first_child('Action')->first_child('QueueId'));
    my $name =            $s->first_child('Name')->text;
    my $action_name =     $s->first_child('Action')->first_child('Name')->text;
-   my $action_queue_id = $s->first_child('Action')->first_child('QueueId')->text;
-   add_edge($name . " / " . $action_name, $action_queue_id);
+   if ($s->first_child('Action')->first_child('QueueId')) {
+       my $action_queue_id = $s->first_child('Action')->first_child('QueueId')->text;
+       add_edge($name . " / " . $action_name, $action_queue_id);
+   } else {
+       my $action_servlet = $s->first_child('Action')->first_child('Url')->text;
+       add_edge($name . " / " . $action_name, $action_servlet);
+   }
 }
 
 
