@@ -1,0 +1,82 @@
+SUBSET II technologies and skills list
+======================================
+* Web Technologies
+** HTML 3.2, 4 and 5
+** Javascript (1.2 to present)
+*** jQuery
+*** YUI
+** iOS/Xcode
+* Mobile
+** Xamarin/C#
+** iOS/Objective C
+** Android
+* Social Media
+** Facebook Social Plugins
+** Twitter
+* Analytics
+** Google Analytics
+** Adobe SiteCatalyst (Omniture)
+** Doubleclick (Floodlight/Spotlight)
+* Web Services
+** REST
+** HATEOAS
+* Databases
+** MySQL
+** Oracle
+** Microsoft SQL Server
+** PostgreSQL
+* NoSQL
+** Riak
+** Elastic Search
+* Programming Languages
+** C#/C++/C
+** Java
+** Javascript
+** Groovy
+** Perl
+** Scala
+** VB.NET
+** Ruby
+** Python
+* Platforms and Frameworks
+** Modern Perl
+** C#/VB.NET
+** Java
+** PHP
+** Scala
+** iOS
+*** Core Data
+*** Interface Builder
+*** AFNetworking
+** OS X
+*** Cocoa
+* Web Servers
+** Apache
+** Lighttpd
+** Nginx
+** IIS 6, 7, 7.5
+** WebMatrix
+* Operating Systems
+** Linux
+*** Debian
+*** Red Hat Enterprise Linux
+*** CentOS
+*** Fedora
+*** Slackware
+*** Ubuntu
+** Windows Server 2003, 2008, 2012
+*** Active Directory
+* Virtualization
+** Cloud Platforms
+*** Amazon (AWS)
+*** Microsoft Azure
+*** Rackspace
+* Networking
+** F5 BigIP
+** Cisco IOS
+** VPN
+*** Cisco
+*** IPSec
+* Search Engines
+** ElasticSearch
+** Google Search Appliance
